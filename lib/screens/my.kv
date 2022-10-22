@@ -1,0 +1,62 @@
+Important:
+    name_input: name
+    text_label: label
+    age_input: age
+    canvas:
+        Color:
+            rgba: [1, 1, 1, 1]
+        
+        Rectangle:
+            size: self.size
+            pos: (0, 0)
+        Color:
+            rgba: [0.5, 0.2, 0.1, 1]
+        
+        Rectangle:
+            size: (self.size[0], 35)
+            pos: (0, 465)
+    Label:
+        text: "Lenom App"
+        color:1,1,1,1
+        size_hint: 1, 0.1
+    Label:
+        color:0,0,0,1
+        size_hint: 1, 0.4
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint: 1, 0.6
+        
+        BoxLayout:
+
+            size_hint: 0.9, 0.2
+            orientation: 'horizontal'
+            Label:
+                color: 0.3, 0.2, 0.6, 1
+                text: "Vôtre Nom"
+            TextInput:
+                id: name
+                hint_text:'Entrez Vôtre nom'
+                multiline: False
+                on_text_validate: root.ecrire(self)
+        Label:
+            size_hint: 0.1, 0.1
+        BoxLayout:
+
+            size_hint: 0.9, 0.2
+            orientation: 'horizontal'
+            Label:
+                color: 0.3, 0.2, 0.6, 1
+                text: "Vôtre Age"
+            TextInput:
+                id: age
+                hint_text:'Age ?'
+                multiline: False
+                on_text_validate: root.ecrire(self)
+            
+        Label:
+            id: label
+            color: 0.3, 0, 0, 1 
+            
+        
+        
+    
