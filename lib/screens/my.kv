@@ -1,7 +1,7 @@
 Important:
-    name_input: name
+    email_input: email
     text_label: label
-    age_input: age
+    pass_input: password
     canvas:
         Color:
             rgba: [1, 1, 1, 1]
@@ -32,10 +32,10 @@ Important:
             orientation: 'horizontal'
             Label:
                 color: 0.3, 0.2, 0.6, 1
-                text: "Vôtre Nom"
+                text: "Email: "
             TextInput:
-                id: name
-                hint_text:'Entrez Vôtre nom'
+                id: email
+                hint_text:'Entrez Vôtre mail'
                 multiline: False
                 on_text_validate: root.ecrire(self)
         Label:
@@ -46,10 +46,10 @@ Important:
             orientation: 'horizontal'
             Label:
                 color: 0.3, 0.2, 0.6, 1
-                text: "Vôtre Age"
+                text: "password: "
             TextInput:
-                id: age
-                hint_text:'Age ?'
+                id: password
+                hint_text:'mot de passe'
                 multiline: False
                 on_text_validate: root.ecrire(self)
             
